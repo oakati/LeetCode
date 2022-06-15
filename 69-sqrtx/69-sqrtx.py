@@ -8,5 +8,5 @@ class Solution(object):
         while True:
             square = i*i
             if square > x:
-                return i - 1
+                return (i - 1)
             i = i + 1
