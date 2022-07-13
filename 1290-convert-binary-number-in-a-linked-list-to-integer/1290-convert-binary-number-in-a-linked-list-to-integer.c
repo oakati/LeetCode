@@ -8,11 +8,10 @@
 
 
 int getDecimalValue(struct ListNode* head){
-    int sum = 0;
-    do
+    while(head->next != NULL)
     {
-        sum = 2*sum + head->val;
+        head->next->val += 2 * head->val;
         head = head->next;
-    }while(head != NULL);
-    return sum;
+    }
+    return head->val;
 }
