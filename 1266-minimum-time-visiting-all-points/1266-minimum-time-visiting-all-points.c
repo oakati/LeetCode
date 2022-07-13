@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 int minTimeToVisitAllPoints(int** points, int pointsSize, int* pointsColSize){
-    int sum = 0, a, b, c;
+    int sum = 0, a, b;
     for(int i = 0; i < pointsSize-1; i++)
     {
         a = abs(points[i+1][1]-points[i][1]);
