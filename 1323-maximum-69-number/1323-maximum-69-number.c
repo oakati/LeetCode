@@ -15,8 +15,8 @@ int findNoOfDigits(int num)
 
 int maximum69Number (int num){
     int len = findNoOfDigits(num);
-    char mystr[10000];
-    len = sprintf(mystr, "%d", num);  
+    char mystr[len+1];
+    sprintf(mystr, "%d", num);  
     for(int i = 0; i < len; i++)
     {
         if(mystr[i] == '6')
