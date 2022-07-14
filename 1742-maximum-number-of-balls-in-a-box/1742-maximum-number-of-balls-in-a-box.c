@@ -17,18 +17,11 @@ int countBalls(int lowLimit, int highLimit){
         n = sprintf(text, "%d", i);
         for(int j = 0; j < n; j++)
         {
-            sum += text[j]-48;
+            sum += text[j];
         }
+        sum -= 48*n;
         array[sum-1]++;
         record = array[sum-1] > record ? array[sum-1] : record;
     }
-    /*record = 0;
-    for(int i = 0; i < SIZE; i++)
-    {
-        if(array[i] > record)
-        {
-            record = array[i];
-        }
-    }*/
     return record;
 }
