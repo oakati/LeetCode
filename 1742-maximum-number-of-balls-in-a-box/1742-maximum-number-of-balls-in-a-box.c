@@ -10,6 +10,7 @@ int countBalls(int lowLimit, int highLimit){
     {
         array[i] = 0;
     }
+    record = 0;
     for(int i = lowLimit; i <= highLimit; i++)
     {
         sum = 0;
@@ -19,14 +20,15 @@ int countBalls(int lowLimit, int highLimit){
             sum += text[j]-48;
         }
         array[sum-1]++;
+        record = array[sum-1] > record ? array[sum-1] : record;
     }
-    record = 0;
+    /*record = 0;
     for(int i = 0; i < SIZE; i++)
     {
         if(array[i] > record)
         {
             record = array[i];
         }
-    }
+    }*/
     return record;
 }
