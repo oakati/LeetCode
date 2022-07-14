@@ -1,13 +1,5 @@
-void findN(char * s, int* returnSize)
-{
-    *returnSize = 1;
-    while(*s)
-    {
-        (*returnSize)++;
-        s++;
-    }
-    s -= (*returnSize)-1;
-}
+#include <stdio.h>
+#include <string.h>
 
 void reconsPerm(char * s, int* myarray, int* returnSize)
 {
@@ -30,7 +22,7 @@ void reconsPerm(char * s, int* myarray, int* returnSize)
 }
 
 int* diStringMatch(char * s, int* returnSize){
-    findN(s, returnSize);
+    *returnSize = strlen(s)+1;
     int* myarray = malloc(*returnSize*sizeof(int));
     reconsPerm(s, myarray, returnSize);
     return myarray;
