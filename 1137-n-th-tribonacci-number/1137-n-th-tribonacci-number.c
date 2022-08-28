@@ -12,6 +12,8 @@ int tribonacci(int n){
         case 2:
             return 1;
             break;
+        default:
+            break;
     }
     int arr[n+1];
     for(int i = 0; i <= n; i++)
