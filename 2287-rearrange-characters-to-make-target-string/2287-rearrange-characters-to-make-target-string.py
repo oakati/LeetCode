@@ -7,6 +7,6 @@ class Solution(object):
         """
         record = len(s)
         
-        for i in target:
+        for i in set(target):
             record = min(record, s.count(i)/target.count(i))
         return record
